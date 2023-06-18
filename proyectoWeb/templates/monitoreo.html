@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block titulo %} Pagina de Monitoreo {% endblock %}
+{% block encabezado %}Monitoreo de servidores{% endblock %}
+
+
+{% block scripts %}
+<script src="/static/js/chatAjax.js"></script>
+{% endblock %}
+
+
+{% block contenido %}
+<!--        <ul>
+	{% for archivo in list %}
+                <li>
+		<h3>{{archivo.id}}</h3>
+                        <ul>
+                                <li>Hostname:{{ archivo.hostname }}</li>
+                                <li>Direccion IP:{{ archivo.direccionIP }}</li>
+                                <li>Estado:  {{ archivo.estado }} </li>
+                                <li>Fecha:   {{ archivo.fecha }} </li>
+                        </ul>
+        {% endfor %}
+</ul>-->
+<table class="table table table-dark">
+  <thead>
+    <tr>
+      <th>Hostname</th>
+      <th>Direccion IP</th>
+      <th>Estado</th>
+      <th>Fecha</th>
+    </tr>
+  </thead>
+<tbody id="datos"></tbody>
+</table>
+
+
+{% endblock %}
